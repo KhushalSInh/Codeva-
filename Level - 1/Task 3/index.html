@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive JavaScript Demo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">JS Demo</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle">Examples <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#" id="openModalBtn">Open Modal</a></li>
+                    <li><a href="#" id="toggleThemeBtn">Toggle Theme</a></li>
+                    <li><a href="#counter">Counter</a></li>
+                    <li><a href="#form">Form Validation</a></li>
+                </ul>
+            </li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Interactive JavaScript Demo</h1>
+            <p>Experience dynamic web interactions with vanilla JavaScript</p>
+            <div class="cta-buttons">
+                <button class="btn primary-btn" id="heroModalBtn">Try Modal</button>
+                <button class="btn secondary-btn" id="startDemoBtn">Start Demo</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <h2>Interactive Features</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-caret-down"></i>
+                </div>
+                <h3>Dropdown Menus</h3>
+                <p>Click the Examples dropdown in navbar to see interactive dropdowns</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-window-maximize"></i>
+                </div>
+                <h3>Modal Windows</h3>
+                <p>Click any "Try Modal" button to open an interactive modal window</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-sync-alt"></i>
+                </div>
+                <h3>Theme Toggle</h3>
+                <p>Switch between light and dark themes with a single click</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h3>Form Validation</h3>
+                <p>Real-time validation for forms with instant feedback</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Counter Section -->
+    <section class="counter-section" id="counter">
+        <h2>Interactive Counter</h2>
+        <div class="counter-container">
+            <div class="counter-display">
+                <span id="counterValue">0</span>
+            </div>
+            <div class="counter-controls">
+                <button class="btn counter-btn" id="decrementBtn"><i class="fas fa-minus"></i> Decrement</button>
+                <button class="btn counter-btn" id="resetBtn"><i class="fas fa-redo"></i> Reset</button>
+                <button class="btn counter-btn" id="incrementBtn"><i class="fas fa-plus"></i> Increment</button>
+            </div>
+            <div class="counter-extra">
+                <button class="btn small-btn" id="doubleBtn">Double</button>
+                <button class="btn small-btn" id="halfBtn">Half</button>
+                <button class="btn small-btn" id="randomBtn">Random</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Validation Section -->
+    <section class="form-section" id="form">
+        <h2>Form Validation Demo</h2>
+        <div class="form-container">
+            <form id="registrationForm">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" placeholder="Enter your full name">
+                    <div class="error-message" id="nameError"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" placeholder="Enter your email">
+                    <div class="error-message" id="emailError"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password *</label>
+                    <input type="password" id="password" placeholder="Minimum 8 characters">
+                    <div class="error-message" id="passwordError"></div>
+                    <div class="password-strength">
+                        <div class="strength-bar"></div>
+                        <span class="strength-text" id="strengthText">Password strength</span>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" placeholder="(123) 456-7890">
+                    <div class="error-message" id="phoneError"></div>
+                </div>
+                
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="terms">
+                    <label for="terms">I agree to the terms and conditions *</label>
+                    <div class="error-message" id="termsError"></div>
+                </div>
+                
+                <div class="form-buttons">
+                    <button type="submit" class="btn primary-btn">Submit Form</button>
+                    <button type="button" class="btn secondary-btn" id="clearFormBtn">Clear Form</button>
+                </div>
+                
+                <div class="form-feedback" id="formFeedback"></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Image Gallery Section -->
+    <section class="gallery-section">
+        <h2>Interactive Image Gallery</h2>
+        <div class="gallery-controls">
+            <button class="btn gallery-btn" id="prevBtn"><i class="fas fa-chevron-left"></i> Previous</button>
+            <span id="imageCounter">1 / 5</span>
+            <button class="btn gallery-btn" id="nextBtn">Next <i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="gallery-container">
+            <div class="gallery-image">
+                <img id="currentImage" src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Gallery Image">
+            </div>
+            <div class="image-thumbnails">
+                <div class="thumbnail active" data-index="0">
+                    <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Image 1">
+                </div>
+                <div class="thumbnail" data-index="1">
+                    <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Image 2">
+                </div>
+                <div class="thumbnail" data-index="2">
+                    <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Image 3">
+                </div>
+                <div class="thumbnail" data-index="3">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Image 4">
+                </div>
+                <div class="thumbnail" data-index="4">
+                    <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Image 5">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal" id="demoModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Interactive Modal</h3>
+                <button class="close-modal" id="closeModalBtn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>This is a modal window created with JavaScript. You can close it by:</p>
+                <ul>
+                    <li>Clicking the X button</li>
+                    <li>Clicking outside the modal</li>
+                    <li>Pressing the ESC key</li>
+                </ul>
+                <div class="modal-actions">
+                    <button class="btn primary-btn" id="modalActionBtn">Click Me!</button>
+                    <button class="btn secondary-btn" id="closeModalBtn2">Close</button>
+                </div>
+                <div class="modal-feedback" id="modalFeedback"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <div class="toast-content">
+            <span id="toastMessage">This is a toast notification!</span>
+            <button class="toast-close" id="closeToastBtn">&times;</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>JavaScript Interactive Demo &copy; 2023</p>
+            <div class="footer-actions">
+                <button class="btn small-btn" id="backToTopBtn"><i class="fas fa-arrow-up"></i> Back to Top</button>
+                <button class="btn small-btn" id="showToastBtn">Show Toast</button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

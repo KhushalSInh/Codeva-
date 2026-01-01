@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox & Grid Responsive Layout</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header with Flexbox -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <i class="fas fa-layer-group"></i>
+                    <span>FlexGrid</span>
+                </div>
+
+                <!-- Navigation with Flexbox -->
+                <nav class="navbar">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                        <li class="nav-item"><a href="#gallery" class="nav-link">Gallery</a></li>
+                        <li class="nav-item"><a href="#blog" class="nav-link">Blog</a></li>
+                        <li class="nav-item"><a href="#features" class="nav-link">Features</a></li>
+                        <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Actions with Flexbox -->
+                <div class="header-actions">
+                    <button class="btn btn-primary">Sign In</button>
+                    <button class="btn btn-secondary">Get Started</button>
+                    <div class="mobile-toggle">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section with Flexbox -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">Responsive Web Design with Flexbox & Grid</h1>
+                    <p class="hero-description">Master modern CSS layout techniques that adapt to any screen size. Learn how to combine Flexbox for one-dimensional layouts and CSS Grid for two-dimensional layouts.</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary btn-large">
+                            <i class="fas fa-play-circle"></i> Watch Tutorial
+                        </button>
+                        <button class="btn btn-outline btn-large">
+                            <i class="fas fa-download"></i> Download Examples
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-container">
+                        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxITEhUSEhIWFRUVFRUVFRUVFRcVFxUVFRUWFhUVFhUYHSggGBolGxUWITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OFxAQGi0lHSUtLS0tKy0rLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIALcBFAMBIgACEQEDEQH/xAAcAAAABwEBAAAAAAAAAAAAAAAAAQIDBAUGBwj/xABHEAACAQIEAwUEBwUGBAYDAAABAgMAEQQSITEFQVEGEyJhgTJxkaEHFEJSscHwI2JyktEWM1OCwuEkc6LSFWOys8PxNENE/8QAGQEAAwEBAQAAAAAAAAAAAAAAAAECAwQF/8QAKxEAAgIBAwMDBAEFAAAAAAAAAAECERIDIUETMVEEImEycaGxgRQjQpHR/9oADAMBAAIRAxEAPwDkYFOBaCCnAK0M7EEUnLTtqFqKFY1loZadtQoHY2BTiihajvQAKFC9C9ABilqKQKcFABgVIjFRxUmGmiZDwFJIqxw3DZGIGU6+a/mRbnWg4V2ZJYZonJsbgNGNiBe/fC9bLTbOafqIQMhHh832kH8TWqThuFsdRNhN7eOdRfS/6+FdCXh6ojZkmQgizd4j2sbBsvem7Cw35U4SxX2cU1y2qvFZdfYsz3NrEZrC9hpyrRaK5OSXrpN+1GKLzwqGP1Nlva6y5uutlYm2m9ulKHHJ7C0cP+VyPxq94hhZVbNh4sSWIBZXWFrZiQGGTNa5AG2uvnfPz8HxRJZ8PNcm5PcOBe9vsrYag0PTiVDXm+9D0fF8Q22FRwN7YiMf+qn4+LsAWfAyLa5JjlSTbfQVUS4RkHiRl/iUr+IpCyW2b4Gl0l5L68lwvz/0tR2swx9pZF/jQD5hr/Klx8YwUnsygH3Nb42t86qe8fr8dfxpDKG0ZUP8Sr+NqOj8lf1Px+S8IQ+xLG3kHW/wvemJUZdSCPO2nxqqTBwkf3Sj/ltlPoAwoxglW+RpovO5J+YNS9CQ16qHNlgMRVhwds0qe+s8yS2uswcdZEDel7jXarLs1i2GKiR1Q5g5zqWW2RcxOUi1uXrWbhJdzaOrCWyZou0esiDyNV+WrbjHD5mkDhMyZdCuvyqDktuLe8WpDsaWOliOnQKPLSCxjJSETxH0FSStIgXf30DsaMdCpBFCkOzlYNOCiCUoCkasUBQNFeklqomgyaSWpJaiqWyqFZqIUBR0gBShRAUpRTAlQQXqwwXA5pjaGJn9w0HvY6CpHBMI5ZTYb8wCPUHQ10GSPF92E70LGRa0aJHoeV1F/nS34DJI5Th8IzGwG9Xq8HKQSSEeyhPw1rRw8OSOTa/h/r/Wi7QTWw0vIFSP5tPzq4mU2aPB8GRAlpJPFYgMIr3sDcBo7kbWtoN/dEkwxLsmfGW8ROh8V28WXKAMvparHD8HUZFWSbJ7PhxMxXNzUZX01B8hY3tTMhwynWaRgPCQOIspDXOuuJXTlbfXbp25UeFVu2QlwItcvjrFlHizHMTbLbzuf1yh8UxeGgymbiGMhzaqGV/Ha3iHgYm3P3Ae+j7b9rRAPq+FOIWWwLyPinkVFZbWQJM6Mx1vyA+XM5pWZi7sWZjdmYlmJ6knU1hPWrZHfoejyWUux1NO0EP/APNxezFjm72OWO/RlKxHcs29tz1N47TXYt9bwbuxJJVwrlt76opv5/hXM+8NrX06UpH0qOvI6P6KHB1aabERDvO9UgEDNDjHZhfQHIk4PMja2ppg8fky5S72OjAtmuLZQLyK+wAHpWV7K4wSv3EsmW4JR8jPcjXIQuu1zfytzrSz8KUEj6zDdd1cTxt7gGhtf1rWM7VnNPSwlixT8TjIN0iJO5OGgJG2oyxx8ht19aIyYdm1hi56I0sea40//dIF16LamxwZzbI0El+S4iEML9Vd1PypubgGJGpw0xGuqRmTbc3S4tVqRDj4YU6xlfBFkOYWDOH8JudTkBP2bet/KPkt9i2o1DW+GoqLKmQ2JKHowKn4b0BI2hDg+v8A3VWROHyPX1Pt6ct7aDW4v+iKt+xMaycRiB1AixBItbki7f5jVQM5Gtj6gfPbrWh7A68QW4Nxhpzy/wASEcj51nqv2M19Ov7i/n9HRzw+Mezdf4Tb5VGlwLfuuOjDX41Y5qLNXJZ6FGdxPCo/tRMnmmo+FQX4Rf8Au5VbyPhNbCmpcIje0oNVkLFGKxGDlT2ozbqNR8qhQSC3qfxrdNw63sSMvkfEPnUDF4Fj7cKSDqvhai0LEypNHVnJw/D31Eyfu2v86FAUzj9qSTSnNMO1JmiFM1IJpIpQpFAo6FKVSaQwClKt6l4bh7NyrQcO4D1FNIlySKDDcPZuVaHhvZ7mRV9h8Gie+pGcnQaVVGbk2KwWGSOrVOIErk5cqrosOTVjh8H1oJohQ4Ys5Pl+ZH+k1F7Z4PLgpjzC3/lOb8q0mHjt8P8A5Jaru18ebCTL1ik/9tqlPY0a3X8GhlixAKWnRibjN9XbmQb5RIAbbHbQ6XpmPCYjP/e4e+Tf6q1yA1tQMRr1v8qeGREF4cSlgMwJxFrkC5urH0qsx2GjOYfU8QQDfMVZs1je5Mlzc9TrXVkjyOlKzinbmRjj8Rmy3D5PAMq/swEuFubez1NUN6v+2+C7rGSLkZFazoHUK2VhzA28QYelUBrlfc9mH0oKloKRanUW9Itl92ZwV2L/AHdR7tjWnzbbEDkQP6UnsdAkOH+sSFVbxBFbKS/IEI4ItvuCNNqtzxfe8ED6k3eJQdeRMeX8K6NO6OH1FOSKdyv+GPQn8qZXIrXUMp6g2Px3FXD8QhbfCRrvco8ovobWDM1jf9dI+LfDNbuo5UN9Qzq62/dsoPxvWlmFCcLxLEAWTFShT9gsXXW97qxt57UTYxybvHhpDzLQRgncamMKfnUZsOh5225g/KjXCEC4ew/XIVVfBD+46phBJbDLcnQQzSpl66Sd4Dr1q77CRg8QcjMFGFfKGKlgGmi3ZAAfZPIVRLCw2YEc7i3Ub/GtF9Ho/wCMmJFrYaIb33lk1/6ajV+k00PrN+wpF6dYU0a5TvDDUsPTJor0AOO1Nl6IsKQVNAAL+V6FC1CgDzmzU2aO1KVDQXQkClKpNS8PgSeVXWB4R1FAN0U+G4ezcqvMBwTmatsPh0QVIDk7bUENsRBhlTkDUpZb6bUIYCanQ4G+9UTQ3BBflVjh8H1o44su1PrJ1FAUPJGBtTqmmo5B1qBJjZJnEWGSzFgpZtbC+9udJtLuNJvsW/n+6Pndv9VQeMHNDIP3H3/gI/OrnifCl71oRIUfLGY5D7JIQAow5A2vcbGqjF8PxIDRPZWPhzWvdSpJKjYnlWVvE2SWW5eYAYdoIiwhJMMTEHJckKrNcWud6S+IwzHxAFSLW7qQi/O90HX5VncNxHiccSR/U42EaKgPegaKALkX8qI8e4kGueGo+lgBMBz9dd/jW8daFdzhl6XUt0vyjL/THhYWWCWMjNdka2bQWzAeJQdwfidq5dkrpPb7jXfqkLxxRypIzSJHJ3mWyqqhmsBm8Tghbjw761g5YQDWU5pydHbo6Uo6asj4XCtI6oguWIUe8mwq0xPDFjdFVzJf2iBZLhyDkIJzpYCzfIbAuGyd26yi5MbK1h9oZhmG3StJ2ewK4iY92GEKWCh7XVALBdCed+dEd2XOkrNOOC5MOjyOiZ10fuVe2VhaNdQ1zfNYb630BpUfZvErGzmOF0F39ogqhJsCVKqLDfUgWOtqT2jxuDlcQjFGNcKuQhcPJMilgGctIugOirbqh16VBjwgW68QwzEDYkoT1HPof0a7NOvJ5Ou23VP/AEywfhMrDw4dieRjkSYXtfQIzE6a6VVTYORCMyuhOq50ZCfMZgL+lKjw8bHwzYaXkAuIRSdL6d5lPx50fEFdMnehwCCVu4ccr5bGw5Vb3M062EEaC+bzvYj9bUQVeo+FuXUEUmNltuw+frYUoN++vqKBti0J020Nr3Jvrv8ArrWj+j9f+JxJve0OGHxec/lWaKdVB/ht+ZrSfRxH+2xZ1Hhwy2PkJm/1Vnqv2l+mXvN0TSC9B70xiMQqKXchVUFmZjYAAXJJ5CuY7x3PSHk6UiGQOoZSCrAEMDcMDsQRuKdNhQA0vXnTgkpFCgY7QpAWhQI89QYQmrrB8Pp6KNVqUhvQNsehjReVPg9NKaihNWGHwlMkaihJqdhsJT8UIFSVoAOKMCnwabWrLhnB5Zj4BZebnRR68/ShugSsh3q64X2dllszDu06sNT7l/M1o+FcAhhsfbf7zDY/ury/Gre9YS1fBqtPyVEfAYVQplvmUqxOpIIsdeVNcL4KIGzKL+YNr+8Hn7qvKK1YtW7Nk6VFHxPh7ytmKkeqj4neoKYYAhp5s5TNlVQz2v5gXJ05D41UfSH21GGZolNmVRyzXZhfa40Avrews1xfKDx3iPafFz6STuVN/AGKpYnbKttOVaw03W7JlL4Owca7Y4HD6OzseSqpBPxGnrWI7QfSWXRkw0JiLC3eM12AO+Ww0NufnWCnmZjdjc/lyAA0A8hTDHatFpxRDm2B3vf9G/WmZL9TTxWkMKqhW0X3YjBo84EusZBDeosL/wBa3fDuxTwmwxcYQkF/2RDW5qvjt639KwHZ7GBAUJygsDntp5An7PrpXYcFAskKAm/hAv5AaVvgsE0cr1JObjIx/HJMMkjxgZxlUK0gzG+twCeVQ/7PYYwHESwMihyO8RdFSy+Jo7WZb5rncW06jouE4BCDmygnqdau8PFYEDYn8tazxRrm9jmWF+jrBunesBIjgFXgdxHbqDnbU35m2mw1qO30b4M/3WJxER88jr8lU10WTsxGjGbDEwSalhGxjjl6mSPVC37xU+dxpVHLxgM4uq90xCrPbIzOdg6Dw2J0DiwY8gCpObVclp5bMyL/AEb40C8GPjk6B1Zfwz1AxPZjjMe8Ecw6xuv4MVPyrpKi2o+WlSI8a40Ovv8A601qMUtKL4RxqXEYqG/fYGZLbnu2y/zWsfjW5+ivFrMuKmUEBpIlF/3Ihf5k1tY8cp6ilm32ba6m34mrc21Vma0oxdpbhSNUOTgSY4thpc3c5M0uU5SS1xEgPvBc/wDLUEENUiZwiszXsASbC5NuQHM+VaHgOBMUQD27xyZJba+NgBlvzCqFQHmEFSVZxPEwYzgEwjlzT4GRj3bryJ1IAOivuSh0OpB3rfcO4hHPGssTh0YaMPmCORHMbitrxLARTxNDMiyRuLMjC4P9CDqCNQRcVxLtD2exfA5TiMLebBORnVvsX2WW3snkJAPI8gWh2dBzUdVfA+PQ4uISQtcbMp9pG+6w5H5HlU1x00oAkXoVBLPyI9aFAWcrjjvU/DQUqNAKlw1IyRBGBUtGqGrU+jUySUrU8h/XSoqNUgGmBteAdn4SolZ1mvsEYGP1I9r5e6tOoAFhoBsBpYe6uP4eAxtngkaJuqE2PkRzHltV3he3GJh0xEPfKN5ItHHmV2P/AE1yzU+TpjhwdFNBXqn4L2lwuJA7qUZj9hvA/wDKd/S9XNZ9y2hQNFRWoLTJPMPbfFM+OxTMS37eULfl4yLDyACj0qj295qdxxy2ImducsrH3l2Jv8flVfm511oyYbmkfkfxopDoKEfOmIcNFQY6UmQ6DzoAdgmKnMpsRz/IjmPKtn2U7SLpE8kkKX2iyEKesYdWAHVDpzBGxw/KlxyAag/Kqi+DOUb35O+rw+eyHD40OrgkNJCrAKOZMbJr5UeIxWMiu2WF0GvtujgE2UZcjAn1Fc17GdrGjcJc5SfEt7AjnbpXUvrcLupM65TZ8rNqPug33O3lpQ41vewk8tmtyDxLF4if9lJFkiOjgOrGQkXyGx0S24589NDXywBVyeEoykd3KCAVOhAa23oa0r5T7LKT1DC2Zzbl90fI1z/tLI0mNKRkhIVCGx6akfGsprazaDp0kT04g8G4aSL3hnQfxg2kUfvFW0+0atuB8Yhxd/q795l9oAEEe8EAisokzqdPhVtwHjkmHtGIUMd72QCNhfc22f36VCkuTWUXwaUx+h6f7Uai1QjxeSR7ygKl7JbUa2tnO4a99NtRa5qdiWEaM73Copdjv4VGYnTyFV9jP7krhOHM06g6pDlkfze/7FfQgv1BROta2sZ9F/aTD4vDt3fhmDs88bWzBm9lhbdcoVQeiWOoNbOrMX3BSZYlZSrAMrAhlIBBB0IIO4I5UqjoA4n227CT8OkOP4Xm7oaywi7d2t7nw/bh+a77arYdlO00WNTw+GVQDJGTcj95T9pfP411yuX8H4Zhu/xGMw8QjSd8sWX2WjQ2MqjZRI93AGmUIdCTTsZY2oU4y0KYHNIwffUlHBpKJT3dg1JQtKeSmAhG2tOpIPd76BEmMU+HqOrE+VPR2FMkfW5pxBamlejE19RYD7x29B9qmAb4KNyMwFydxof96GE7RY+CdoYJO/VAD3c3i0IGitcEHXrbyqTgoDfPlNvvNufcOQpjsqmfEYuT98IPQtf8BWMoJyNozaiX+D+kqIyiGeP6vLbxJI1rk2y5JCAp9xte+m1bPCY2OXRW1+6dGHpz94rhX0v4DL3OIAGoaJvO13T5d58BWU4F2qxeHUd05aMbRvd1W33dQyf5SKl6fgpSsgcRBUure0CUbyZTZvmCPWq3WtdiuJYHF3MsZw0zG5dDdGYkm5sLXN7klQdfaql4lwoxKGV1kQ7Oux+BI+ZrVMlorZJTYCjimF9dKQ+1NqKoRNBopj4b9CKiAkUsTG1jqKBEljSOlMpNyNKeTTSgB/DTZXU9GBPuBuR8K612BxImw4RrMVBvmF9mbKfeVtf+EVx29a/sDxcwzR6+FnZW9wiZifjlqlHOLj5/ZnJuElNcfo6VPweO9xGo81AB+K2NUHGjHhgZAr+IgNluxvsCSx0HLXqOtbpyDr1GhFVuP4aHUggMCCNfP8vKvNjKnuek91sc8PaQk2SH1ZvyA/OrDAYiZxcgADWyLqfIXO9KTsyVc7Kg1u5tbyvz/XOp3C8TAJe5MoU6+K3hJH2d73Pur0IdHg8+a13ZWQ9tQCFSCRjzEjrGRb2vDrquhINtDerzD9pZXADIoRhqFBIN7gjMTc+8DTnUPtN2eznv4EDSixeMjKZFUk5lB2kGa+3UVXYTxLcC9xqWsPLxa7iy3zX8lIrZGMk0UnFcHNgpRisHIyKCSrLa8ZYWYG9wRbrceldi+jnt9HxBO7ktHikHjTYSAbyR35dV3XzFjXOnlCnxaqwsV1Ite+txfYnWygeY3zPFuFvh3XE4VmUK2ZWU2aJx5j/615g0ThtaCE7dPueoaFYT6NvpBjx6CGYhMUo8S7CUAavGOvVeW4023bEDUmwGpJ5VizQz3bHFnIuEjYiTE5lJBsUw627+QHkbMqA8mlU8qiRxBQFUWUAAAbADQADpaoPD5ziHkxh2mssIP2cMhPdH3uS0h5/tFB9mrIUihsxDpRU7QoA5eqUtRTQl6UuPfWkVQ4LnajMN996cUURe3mTsBqT7hQICqRz+NOxykmwUkjfoPe2wpIjJNm3+4mrH+Jht6VaYThRYDPZV5Iug9Tzpioh4eEudPGfhGv8A3GrvCcOAOZzmbz2HuFPYfDBdFFh05U+Dbcf0osdCcQwA/XKqbsGP2Mkn+JKx+Q/O9TOPT5InPSNiPgaPsfBlwcXmC38zEj5WqV3ZT7EL6RsH3mAlNrmMpIL8grAOf5GeuO8JX2h0JH6/XOu/8TwglhliOokjdP51K/nXn3hTHvCPvIG9RpTYRJmIwqsQNjYnTcnkKphIRcajkfTkatsdiglxu50Ou3w2/wB6pmN9TzoGL0NJy0ihmoAcy0llos9KEppiobtRCnTKDuovSWW1vP5eXnQAoVO4U5Ei+Xen4xEflUBTUjCyWJP7p+Yt+dVF0yJq0ztvYziff4OJzut0PvQ2Hyy1dGW3nXPfot4ighkhYgHvS4uRY3RRz/gNP9pkxoYyCe6hriFCEUKNlzFCzk/ny0Fcz9PKU2+Dda8YwS5LftRKxUmO501/r/vtXNMY5A1J1Y9fCFPIX0vr8K0WH7SCRM1ypFwVO6kGxBt+tRWT4m0kkrtGuh19bDNt53rolowgk4sz0/Uzm3GS7Ghw/HQ2ISRjM18mYYcZXzggDkc1rA25+VblsAk6NPAshZSRIJFUOzDUvlAuHtY7C9xzvWW7FdiYsUizHFMyX8cS+Aq43R7HT03BBG9dc4bgI4UWOFFRF2VRYfLnVx2M9WWWxzKddABqCNQBlB/eyi4uMx3ufSq1J+6JV7ZDYG5Ph8n5hdTZjqOWlweh8chwETl5544SdSrSIpLc2CnW+19OQrL43tVwsWWFHxBXQCOFiL+WfKvqK1U0jHBvgxPGOFGJhiMKxsrXBRvFE6na6nSx6be6ukcC7cvxPCjBOrd+fDinAyqcMPbII0DyaRkC1s7EbCspjeOzyArFgQi7DvW5f8tQLehrX/RlgEjw7t3YWV3/AGpBuDlvkyg+ytmOnUmspuPBrGMq9xq0HpSwKUy0nLUFCqFEKFAHLkFLvbU0mLxAlSLD7R0W/kftHyFT8FhCxumv/mMNv4F5fj51BpQ1Gh0LXQHa48Z9y8veasMHw9m1A7tTud3YeZqwwXD0XX2m+8fyqxC0rCiNhcEqDwj+vxqWkdLQU4q0WFCAlKyU8sdHkosKMl2yfLDJ7lX4sL/Kr/hiFIYkI9mNBp5KKzfbEZskf+JOq+m35itjoKEDF8NljaVY3IzMCUX75W2a3WwINvPyNeb+NtkxM3dHRZ50UjTw94wW19tK7d22wEsuGJw9++jdJYypytdDrkI2axNvhXCuJ4t5MQ8sv948nePpl8ZILkqNje9xTXcOB+TBZIi7asfkSfmbXquq44s14xl5MCfgRVLTAOgaKjoAKioUVMAVY8HwjSyIka53J8CaWZgdFN9Le/Sq6rHgXFnwsq4iNVZ0zZQ4JUFlK3IUi5sTbWhCfYb4ngpYZCssLwkkkIysLC+ylvaUddeWtRw1aHtD27xOMh7idIcucOGVGDKwvsS5A0JG2xrNqaEDLjgePMRJBsbgj3gG3zIrV4XjmcWY3O3kQQCD8DasADU3Csbb2LWUa212vW0NTEw1NLIuFwbSzuEBCZwW9+Vb2/XKtxw3BxqNFA9KreF4cIo89SfM6k/OrzDEGsJSydnRGOMUiE/Ap0mM2BxH1dpBaQFQyNrcHKQRfflzNtzecOyOIm//ACuJYiQHdI27pP5V0+VWOGU8jV1C1hSAouH9g8BF7MCser3f5HT5VdDh8aiyoqjooA/CpSvS73poDMcT4eDUjsyDGSvI1a4mC9Q4IirXtVt2g4L9aOkQMLUvLUkBWoUsChQI4vhuIJcF2zHkOQ8gKuoOPL1rlAxbdacXHuOdTia2dih44vWp8HF1PMVxROLOOdSY+PyDmaWIWdwg4ip51YwYoHnXC4O1TjrVnhe3DLvek4sdo7T9ZFJbFrXIR298jSH7cE9aSTG6NjjpFfEwX2RjIffcEfhWmixINcZbtMc2bXa1TsL21I3Jp0xbHY1kXyrhn0mYT/jpmQaNlPrlF/wrQjt4OprN8W4iJ5WkPO3yFOKfIpUuxWcTjIQADdtfcNfxt8KqWhbpWiaQEWJ2ogi1pRGRnO7PSiyHpWl7paH1daKFkZgg9KI1qPqidKScAvQUUGRmaA2NaQ8NXpSG4WvSjEMkZulKavjwlelJPCBRQ8kU6uKUcx1+XlVqeEgbfHn/ALUheEeIG/OigtFp2Nw+LxBkGGYDulVirN4WzEgKoIIB0PTbetEvHJICExmHeI7BgPCT5a2P+UmnvowRMPHOWOrug9EUn/Wa2z46JwVbKynQqwBBHmDoaWAdQruB46Kb+6lViBewPiHvU6irxG61kuIdj8HIc8Lth33BjN1B65CdP8pWmIm4lhtM6YqMdblwPePFf35qWMiso+TdAinBes3wztPC9hJeJ9jn1W/Ozjb1tWhimUgEMCDzBuPjTpitDpBpHd0sOOtGCOooELiFSQaiKfOmeKcTjw8Rllayry3LHkqjmTQBZ5qKuciHE43/AIh8TLhw1wkURYBUBIGaxF2OpJ8+WwFAtjj3d0fdVaf+DT/4ZpEnC5l3jb4VeEvAupB8oru6od1Unuz0od03SoLoj91Q7upBU9KKgKGe7NHkNO+lC9AUNZDRhDT1/KjHuoAZCmleKnQfKjzeVADQLUYZutOd5RiSgBHeP1o+9frSw9H3gpgJEz9aUJ360ecUM4oFQPrD9aP6y/WizijziiwoH1p+tD60/WhnFFmFFhQr649D649JzChcUWFDq8RkGxtShxeYfaPxpgkURtRYUS149OPtGnB2kxA+3VdpQ0p5MWKLCTtDM3tWPmRr8aVh+0s6ewcvuOnqKrcood2KMmGCL3+2mJ+9Sl7cYkc6oMgou7FKx0adPpAxI6VC4p2slnIMuoX2V5DqbdfOqXuxRGMUDNND25kVQoUWAAHpR1l8goUrFR6dHBo/uijbgsR0yj4ChQro6kvJwdOPgpOM9gcNPqFyP95ef8Q2YfPzrA8c7HthtGIsdragjy5rR0KynurOnRk08eDI43CEa6WuQD5jyqKmDY9B7v60dCsjpJMfCqe/8KAoUKAHIuFg07HwYH3df6CjoU0IfTgS9KeTs8PKhQpk2Y7juHaGd0OliCNtiLg1A72hQpFBd6aHfGhQoGDvjRd8aFCgQO+NEZzRUKYA780O/NChQAffGrvg2JjWNiUMkrNZV0VVUbEt1JJ0A5ChQpomT2J0GIAmijlUZnlWNkCiyhmCghrkk3PyreDsjF0FChT5IvYWvZKHoKoO1vAY4lULzIFChQxou+D9k4e6UkXJFT/7JYfpQoUybIv9loG1C+Hl1Pmf6foO/wBlMP8AdoUKAszvbPhMMEaBV8Tsf5VGvzK032R4BFKjPIL6gD53/AfGhQqeTT/Evz2Uw33KFChTIs//2Q==" alt="Web Design Illustration">
+                        <div class="image-overlay">
+                            <div class="overlay-text">Fully Responsive</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Grid Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose Flexbox & Grid?</h2>
+            <p class="section-subtitle">Modern layout techniques for modern web design</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="feature-title">Mobile First</h3>
+                    <p class="feature-description">Design for mobile devices first, then scale up for larger screens using media queries.</p>
+                    <div class="feature-tags">
+                        <span class="tag">Flexbox</span>
+                        <span class="tag">Responsive</span>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-th"></i>
+                    </div>
+                    <h3 class="feature-title">Grid Layouts</h3>
+                    <p class="feature-description">Create complex two-dimensional layouts with CSS Grid. Perfect for galleries and dashboards.</p>
+                    <div class="feature-tags">
+                        <span class="tag">CSS Grid</span>
+                        <span class="tag">2D Layout</span>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-align-justify"></i>
+                    </div>
+                    <h3 class="feature-title">Flex Alignment</h3>
+                    <p class="feature-description">Easily align and distribute space among items in a container, even when their size is unknown.</p>
+                    <div class="feature-tags">
+                        <span class="tag">Flexbox</span>
+                        <span class="tag">Alignment</span>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                    </div>
+                    <h3 class="feature-title">Flexible Sizing</h3>
+                    <p class="feature-description">Create flexible layouts that adapt to available space without media queries.</p>
+                    <div class="feature-tags">
+                        <span class="tag">Flexible</span>
+                        <span class="tag">Adaptive</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery with CSS Grid -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <h2 class="section-title">Photo Gallery (CSS Grid)</h2>
+            <p class="section-subtitle">Responsive gallery layout using CSS Grid with automatic placement</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item tall">
+                    <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Mountain Landscape">
+                    <div class="gallery-overlay">
+                        <h3>Mountain View</h3>
+                        <p>CSS Grid: span 2 rows</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Northern Lights">
+                    <div class="gallery-overlay">
+                        <h3>Northern Lights</h3>
+                        <p>Grid item</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item wide">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Mountain Peak">
+                    <div class="gallery-overlay">
+                        <h3>Mountain Peak</h3>
+                        <p>CSS Grid: span 2 columns</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1439066615861-d1af74d74000?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Forest Path">
+                    <div class="gallery-overlay">
+                        <h3>Forest Path</h3>
+                        <p>Grid item</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1505142468610-359e7d316be0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Beach Sunset">
+                    <div class="gallery-overlay">
+                        <h3>Beach Sunset</h3>
+                        <p>Grid item</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Night Sky">
+                    <div class="gallery-overlay">
+                        <h3>Night Sky</h3>
+                        <p>Grid item</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Forest River">
+                    <div class="gallery-overlay">
+                        <h3>Forest River</h3>
+                        <p>Grid item</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-controls">
+                <div class="view-options">
+                    <button class="view-btn active" data-view="grid">
+                        <i class="fas fa-th"></i> Grid View
+                    </button>
+                    <button class="view-btn" data-view="masonry">
+                        <i class="fas fa-th-large"></i> Masonry
+                    </button>
+                    <button class="view-btn" data-view="list">
+                        <i class="fas fa-list"></i> List View
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Layout with CSS Grid -->
+    <section class="blog" id="blog">
+        <div class="container">
+            <h2 class="section-title">Blog Layout (CSS Grid)</h2>
+            <p class="section-subtitle">Responsive blog layout using CSS Grid with different column arrangements</p>
+            
+            <div class="blog-grid">
+                <article class="blog-card featured">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Web Design">
+                        <div class="blog-badge">Featured</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Web Design</span>
+                            <span class="blog-date">June 15, 2023</span>
+                        </div>
+                        <h3 class="blog-title">Mastering CSS Grid: A Complete Guide</h3>
+                        <p class="blog-excerpt">Learn how to create complex layouts with CSS Grid. This comprehensive guide covers everything from basic grid concepts to advanced techniques.</p>
+                        <div class="blog-footer">
+                            <div class="blog-author">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Author" class="author-avatar">
+                                <span class="author-name">Alex Johnson</span>
+                            </div>
+                            <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w-600&q=80" alt="Coding">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">CSS</span>
+                            <span class="blog-date">June 10, 2023</span>
+                        </div>
+                        <h3 class="blog-title">Flexbox vs Grid: When to Use Which</h3>
+                        <p class="blog-excerpt">Understanding when to use Flexbox and when to use CSS Grid can significantly improve your layout efficiency.</p>
+                        <div class="blog-footer">
+                            <div class="blog-author">
+                                <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Author" class="author-avatar">
+                                <span class="author-name">Maria Garcia</span>
+                            </div>
+                            <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&auto=format&fit=crop&w-600&q=80" alt="Responsive Design">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Responsive</span>
+                            <span class="blog-date">June 5, 2023</span>
+                        </div>
+                        <h3 class="blog-title">Mobile-First Responsive Design</h3>
+                        <p class="blog-excerpt">Learn how to implement mobile-first responsive design principles using modern CSS techniques.</p>
+                        <div class="blog-footer">
+                            <div class="blog-author">
+                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Author" class="author-avatar">
+                                <span class="author-name">David Chen</span>
+                            </div>
+                            <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w-600&q=80" alt="Performance">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Performance</span>
+                            <span class="blog-date">May 28, 2023</span>
+                        </div>
+                        <h3 class="blog-title">Optimizing CSS for Performance</h3>
+                        <p class="blog-excerpt">Tips and techniques for writing performant CSS that loads quickly and renders efficiently.</p>
+                        <div class="blog-footer">
+                            <div class="blog-author">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Author" class="author-avatar">
+                                <span class="author-name">Michael Brown</span>
+                            </div>
+                            <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixlib=rb-4.0.3&auto=format&fit=crop&w-600&q=80" alt="Accessibility">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Accessibility</span>
+                            <span class="blog-date">May 20, 2023</span>
+                        </div>
+                        <h3 class="blog-title">Accessible Web Layouts</h3>
+                        <p class="blog-excerpt">Creating web layouts that are accessible to all users, including those with disabilities.</p>
+                        <div class="blog-footer">
+                            <div class="blog-author">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Author" class="author-avatar">
+                                <span class="author-name">Sarah Williams</span>
+                            </div>
+                            <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?ixlib=rb-4.0.3&auto=format&fit=crop&w-600&q=80" alt="Animation">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Animation</span>
+                            <span class="blog-date">May 15, 2023</span>
+                        </div>
+                        <h3 class="blog-title">CSS Animation Techniques</h3>
+                        <p class="blog-excerpt">Learn how to create smooth animations and transitions using pure CSS.</p>
+                        <div class="blog-footer">
+                            <div class="blog-author">
+                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Author" class="author-avatar">
+                                <span class="author-name">Emma Davis</span>
+                            </div>
+                            <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section with Flexbox -->
+    <section class="pricing">
+        <div class="container">
+            <h2 class="section-title">Pricing Plans (Flexbox)</h2>
+            <p class="section-subtitle">Flexible pricing options using Flexbox layout</p>
+            
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="plan-name">Basic</h3>
+                        <div class="plan-price">
+                            <span class="currency">$</span>
+                            <span class="amount">19</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <p class="plan-description">Perfect for beginners</p>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Flexbox Basics</li>
+                        <li><i class="fas fa-check"></i> Grid Fundamentals</li>
+                        <li><i class="fas fa-times"></i> Advanced Techniques</li>
+                        <li><i class="fas fa-times"></i> Project Templates</li>
+                        <li><i class="fas fa-times"></i> Priority Support</li>
+                    </ul>
+                    <button class="btn btn-outline btn-block">Get Started</button>
+                </div>
+
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3 class="plan-name">Professional</h3>
+                        <div class="plan-price">
+                            <span class="currency">$</span>
+                            <span class="amount">49</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <p class="plan-description">For serious developers</p>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Everything in Basic</li>
+                        <li><i class="fas fa-check"></i> Advanced Grid Techniques</li>
+                        <li><i class="fas fa-check"></i> Flexbox Mastery</li>
+                        <li><i class="fas fa-check"></i> Project Templates</li>
+                        <li><i class="fas fa-times"></i> Priority Support</li>
+                    </ul>
+                    <button class="btn btn-primary btn-block">Get Started</button>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="plan-name">Enterprise</h3>
+                        <div class="plan-price">
+                            <span class="currency">$</span>
+                            <span class="amount">99</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <p class="plan-description">For teams & businesses</p>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Everything in Professional</li>
+                        <li><i class="fas fa-check"></i> Team Collaboration</li>
+                        <li><i class="fas fa-check"></i> Custom Templates</li>
+                        <li><i class="fas fa-check"></i> Advanced Support</li>
+                        <li><i class="fas fa-check"></i> Priority Support</li>
+                    </ul>
+                    <button class="btn btn-outline btn-block">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer with CSS Grid -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo">
+                        <i class="fas fa-layer-group"></i>
+                        <span>FlexGrid</span>
+                    </div>
+                    <p class="footer-description">Master modern web layout techniques with our comprehensive guides and tutorials.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-title">Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Flexbox Guide</a></li>
+                        <li><a href="#">Grid Tutorial</a></li>
+                        <li><a href="#">Code Examples</a></li>
+                        <li><a href="#">Cheat Sheets</a></li>
+                        <li><a href="#">Video Tutorials</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-title">Newsletter</h3>
+                    <p class="footer-description">Subscribe to our newsletter for the latest updates.</p>
+                    <form class="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" placeholder="Your email address" required>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2023 FlexGrid. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookies Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

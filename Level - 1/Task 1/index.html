@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NatureScape</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">NatureScape</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Discover Natural Beauty</h1>
+            <p>Explore breathtaking landscapes from around the world</p>
+            <a href="#gallery" class="btn">View Gallery</a>
+        </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+        <h2>Natural Wonders</h2>
+        <div class="image-grid">
+            <div class="image-card">
+                <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Mountain Landscape">
+                <h3>Mountain Peaks</h3>
+            </div>
+            <div class="image-card">
+                <img src="https://images.unsplash.com/photo-1439066615861-d1af74d74000?ixlib=rb-4.0.3&auto=format&fit=crop&w-600&q=80" alt="Forest Path">
+                <h3>Enchanted Forests</h3>
+            </div>
+            <div class="image-card">
+                <img src="https://images.unsplash.com/photo-1505142468610-359e7d316be0?ixlib=rb-4.0.3&auto=format&fit=crop&w-600&q=80" alt="Beach Sunset">
+                <h3>Coastlines</h3>
+            </div>
+            <div class="image-card">
+                <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&auto=format&fit=crop&w-600&q=80" alt="Northern Lights">
+                <h3>Northern Lights</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-content">
+            <h2>About NatureScape</h2>
+            <p>We celebrate Earth's natural wonders through stunning photography and conservation awareness. Our mission is to inspire appreciation for our planet's diverse ecosystems.</p>
+            <p>Join us in exploring mountains, forests, oceans, and skies that remind us of nature's incredible beauty.</p>
+        </div>
+    </section>
+
+    <footer class="footer" id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>NatureScape</h3>
+                <p>Celebrating Earth's beauty since 2023</p>
+            </div>
+            <div class="footer-section">
+                <h4>Connect With Us</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>contact@naturescape.com</p>
+                <p>+1 (555) 123-4567</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 NatureScape. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
